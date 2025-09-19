@@ -133,7 +133,7 @@
     </p>
 
     <!-- FormSubmit integration -->
-    <form action="https://formsubmit.co/nanobuddy@protonmail.com" method="POST">
+    <form action="https://formsubmit.co/90b9b127ba36b36697d0e3989c3ebead" method="POST">
       <!-- Hidden fields -->
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="table">
