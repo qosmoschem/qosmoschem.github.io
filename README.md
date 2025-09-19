@@ -121,7 +121,7 @@
   <header>
     <div class="header-content">
       <h1>Nano Buddy</h1>
-      <img src="MorphNanoBuddy5.svg" alt="Nano Buddy Logo">
+      <img src="MorphNanoBuddy5.svg" alt="Nano Buddy Logo" style="background-color: transparent;>
     </div>
   </header>
   
