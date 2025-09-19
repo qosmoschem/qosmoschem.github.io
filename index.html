@@ -1,1 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nano Buddy</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f0f9ff;
+      color: #333;
+    }
+
+    header {
+      background-color: #4aa3f0;
+      padding: 2rem 1rem 1rem 1rem;
+      color: white;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: center;   /* keep text + logo centered as a group */
+      align-items: center;
+      gap: 1rem;                 /* spacing between text and logo */
+    }
+
+    .header-content h1 {
+      margin: 0;
+      font-size: 3.5rem;
+    }
+
+    .header-content img {
+      width: 80px;
+      height: auto;
+    }
+
+    main {
+      max-width: 700px;
+      margin: 2rem auto;
+      background: white;
+      padding: 0.5rem 2rem 2rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    main h2 {
+      text-align: center;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    main p {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 1rem;
+      color: #555;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    button {
+      background-color: #4aa3f0;
+      color: white;
+      padding: 1rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #338ad9;
+    }
+
+    .message {
+      margin-top: 1rem;
+      font-size: 1rem;
+      text-align: center;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      background-color: #f8fafc;
+      font-size: 0.9rem;
+      color: #666;
+      border-top: 1px solid #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>Nano Buddy</h1>
+      <img src="MorphNanoBuddy5.svg" alt="Nano Buddy Logo" style="background-color: transparent;">
+    </div>
+  </header>
+  
+  <main>
+    <h2>Predict Custom Nanobodies with Machine Learning</h2>
+    <p>
+      Fill out the form below to upload your FASTA target sequence. 
+      We'll process your submission and send the Top 10 nanobody results to your email.
+    </p>
+
+    <!-- FormSubmit integration -->
+    <form action="https://formsubmit.co/90b9b127ba36b36697d0e3989c3ebead" method="POST">
+      <!-- Hidden fields -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="ThankYouPage.html">
+      <input type="hidden" name="_autoresponse" value="Thank you for submitting your sequence. We’ll email your results shortly.">
+
+      <div>
+        <label for="target-name">Target Name</label>
+        <input 
+          type="text" 
+          id="target-name" 
+          name="Target Name" 
+          placeholder="e.g., Spike Protein SARS-CoV-2" 
+          required>
+      </div>
+
+      <div>
+        <label for="fasta-sequence">FASTA Sequence</label>
+        <textarea 
+          id="fasta-sequence" 
+          name="FASTA Sequence" 
+          placeholder=">protein_name
+MTKFLVWLATFAGCLASAVQQAAEPKPVDA..." 
+          required></textarea>
+      </div>
+
+      <div>
+        <label for="email">Email Address</label>
+        <input 
+          type="email" 
+          id="email" 
+          name="User Email" 
+          placeholder="your.email@example.com" 
+          required>
+      </div>
+
+      <button type="submit">Submit Sequence</button>
+    </form>
+
+    <footer>
+      <p>Powered by DeepNano</p>
+    </footer>
+  </main>
+</body>
+</html>
 
